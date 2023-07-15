@@ -34,21 +34,21 @@ function init() {
             type: "list",
             message: questions[1],
             name: "textColor",
-            choices: ["red", "green", "blue"]
+            choices: ["blue", "green", "red"]
         },
 
         {
             type: "list",
             message: questions[2],
             name: "shapeChoice",
-            choices: ["cirlce", "triangle", "square"]
+            choices: ["circle", "triangle", "square"]
         },
 
         {
             type: "list",
             message: questions[3],
             name: "shapeColor",
-            choices: ["red", "green", "blue"]
+            choices: ["green", "red", "blue"]
         },
 
     ]).then(function (data) {
@@ -58,23 +58,26 @@ function init() {
   
 
 
- 
-
-const svgText = `<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+const svgSquare = `<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
 
   <rect x="10" y="10" width="30" height="30" fill="blue" />
   
-  
-  <circle cx="25" cy="75" r="20" fill="blue" />
-  
-  <polygon points="150, 18 244, 182 56, 182" fill="blue" />
-
-</svg>      `
+  </svg>`
 
 
         writeToFile("logo.svg", (svgText));
     })
 }
+
+// <circle cx="25" cy="75" r="20" fill="blue" />
+  
+//   <polygon points="150, 18 244, 182 56, 182" fill="blue" />
+
+//   <polygon points="250,60 100,400 400,400" class="triangle" />
+
+// </svg>
+
+
 
 // Function call to initialize app
 init();
