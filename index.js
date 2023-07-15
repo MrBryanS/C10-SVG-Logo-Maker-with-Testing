@@ -57,15 +57,17 @@ function init() {
   //XML COPY FROM https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes#circle
   
 
+
+ 
+
 const svgText = `<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
 
-  <rect x="10" y="10" width="30" height="30" stroke="white" fill="transparent" stroke-width="5"/>
+  <rect x="10" y="10" width="30" height="30" fill="blue" />
   
-  <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="white" fill="transparent" stroke-width="5"/>
-
-  <circle cx="25" cy="75" r="20" stroke="red" fill="blue" stroke-width="5"/>
   
-  <polygon points="250,60 100,400 400,400" fill="white" />
+  <circle cx="25" cy="75" r="20" fill="blue" />
+  
+  <polygon points="150, 18 244, 182 56, 182" fill="blue" />
 
 </svg>      `
 
