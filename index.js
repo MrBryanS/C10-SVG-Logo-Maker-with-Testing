@@ -1,5 +1,7 @@
 const inquirer = require("inquirer")
 const fs = require("fs");
+const {Circle, Triangle, Square} = require("./lib/shape")
+const SVG = require("./lib/svg")
 
 // Create an array of questions for user input
 const questions = ["Enter up to 3 characters: ",
@@ -56,6 +58,16 @@ function init() {
         var logoSvg = "";
 
         if (data.shapeChoice === "circle") {
+            const circle = new Circle;
+            circle.setColor(data.shapeColor)
+            const svg = new SVG;
+            
+            svg.setShape(circle.render())
+
+
+            console.log(svg)
+      
+      
             logoSvg = 
 `<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <style>

@@ -6,5 +6,5 @@
     }    
     </style>
     <circle cx="55" cy="55" r="50" fill="green" />
-    <text class="logoFont" x="23" y="65" fill="white">SVG</text>
+    <text class="logoFont" x="23" y="65" fill="white">abc</text>
 </svg>
