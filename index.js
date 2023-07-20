@@ -61,24 +61,13 @@ function init() {
             const circle = new Circle;
             circle.setColor(data.shapeColor)
             const svg = new SVG;
-            
-            svg.setShape(circle.render())
-
-
             console.log(svg)
-      
-      
-            logoSvg = 
-`<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <style>
-        .logoFont {
-        font-family: mono;
-        font-size: 32px
-    }    
-    </style>
-    <circle cx="55" cy="55" r="50" fill="${data.shapeColor}" />
-    <text class="logoFont" x="23" y="65" fill="${data.textColor}">${data.logoText}</text>
-</svg>`
+            const logoSvg = svg.setShape(circle.render())
+//             logoSvg = 
+// `<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+//     <circle cx="55" cy="55" r="50" fill="${data.shapeColor}" />
+//     <text class="logoFont" x="23" y="65" fill="${data.textColor}">${data.logoText}</text>
+// </svg>`
 
 
         }
@@ -102,7 +91,7 @@ function init() {
     <rect x="5" y="5" width="100" height="100" fill="${data.shapeColor}"/>
     <text class="logoFont" x="22" y="65" fill="${data.textColor}">${data.logoText}</text>
 </svg>`}
-        console.log(logoSvg);
+        // console.log(logoSvg);
         writeToFile("logo.svg", (logoSvg));
     })
 }
