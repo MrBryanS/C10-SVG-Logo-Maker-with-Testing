@@ -1,5 +1,5 @@
 {
-  "name": "c10-svg-logo-maker-with-testing",
+  "name": "l",
   "version": "1.0.0",
   "description": "This Program runs from a terminal prompt using [Inquirer.js version 8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4)",
   "main": "index.js",
@@ -17,6 +17,7 @@
     "inquirer": "^8.2.4",
     "jest": "^29.6.1"
   },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MrBryanS/C10-SVG-Logo-Maker-with-Testing.git"
