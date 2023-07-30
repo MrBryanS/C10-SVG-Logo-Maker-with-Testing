@@ -1,10 +1,7 @@
 /node_modules
 package-lock.json
-indexc.js
-indexd.js
-/lib/scratch
-/examples/
-examples\logoShowAlignment.svg
-examples\rendersample.js
+examples/
+scratch/
+
 
 

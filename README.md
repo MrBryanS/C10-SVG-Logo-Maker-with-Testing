@@ -1,33 +1,45 @@
 # SVG Logo Maker Implemented with Jest Testing
 
-This Program runs from a terminal prompt using [Inquirer.js version 8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4)
+This program was created as an exercise for the purpose of learning about and gaining experince building a Node.js command line application from scratch.  
 
+The finished program allows the user to choose colors, text and shapes from a list of options to create a variety of simple three character logo designs. 
 
-Testing is implemented with [JEST](https://jestjs.io/docs/getting-started)
+The logo is rendered in a Scalable Vector Graphics (SVG) file called 'logo.svg'  Each new logo will overwrite any previously existing 'logo.svg' file.  It is left to the user to either rename or copy the 'logo.svg' to another folder to save past results.
+
+The finished program runs from a terminal prompt using [Inquirer.js version 8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4) and 
+
+In addtion to the finished program testing is implemented with [JEST](https://jestjs.io/docs/getting-started). 
+
+Have fun!
 
 ## Instructions to create a new logo.svg file: 
 
-### Note: running the program will overwrite the '.\logo.svg' file
+Note: running the program will overwrite the '.\logo.svg' file if one already exists.  Copy the '.\logo.svg' to another location or rename the file to save past results.
 
-Open Terminal
+#### Run the following commands from the terminal prompt using node.js to run the index.js script.
 
-run: npm init -y
 
-run: npm i inquirer@8.2.4
+Set-up the environment:
 
-run: node index.js
+    $ npm init -y
 
-Answer questions and then: 
 
-Open logo.svg in preview mode to see the result.
+Run the program:
 
-The code for your new logo is here:  [logo.svg](logo.svg)
+    $ node index.js
+    
+    Answer questions as prompted.
+
+    A new [logo.svg](logo.svg) is created. 
+
 
 ## Program Demo:
 
 Recording of the finished program:
 
 ## Testing
+
+At the terminal prompt enter: "npm test"
 
 Recording of testing:
 

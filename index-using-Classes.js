@@ -2,7 +2,18 @@ const inquirer = require("inquirer")
 const fs = require("fs");
 const { Circle, Triangle, Square } = require("./lib/shape")
 const SVG = require("./lib/svg")
-console.log("Welcome to the Logo Generator!");
+
+
+console.log(Circle);
+console.log(SVG);
+const ShapeLine = new Circle("green");
+console.log(ShapeLine.render());
+
+
+
+
+
+//  console.log("Welcome to the Logo Generator!");
 console.log("Please answer the following questions to generate your logo.");
 console.log("You can choose up to 3 characters for your logo text.");
 console.log("You can choose from 3 shapes: circle, triangle, or square.");
@@ -45,7 +56,7 @@ function init() {
             type: "list",
             message: questions[2],
             name: "shapeChoice",
-            choices: ["circle", "triangle", "square"]
+            choices: ["square", "circle", "triangle"]
         },
 
         {
@@ -56,34 +67,25 @@ function init() {
         },
         
     ])
-    //
+    //Process user inputs to store code for the shape into the shapeString var
+    
     .then(function (data) {
         console.log("Thank you for using the Logo Generator!");
-        console.log("data", data);
-        console.log("data.logoText", data.logoText);
-        console.log("data.textColor", data.textColor);
-        console.log("data.shapeChoice", data.shapeChoice);
-        console.log("data.shapeColor", data.shapeColor);
-
-
-
-
         
+
         if (data.shapeChoice === "circle") {
+            
             var shapeString = `<circle  cx="100" cy="100" r="75" fill="${data.shapeColor}" />`
         }
-        
         else if (data.shapeChoice === "square") {
+            console.log(data.shapeChoice)
             var shapeString =  `<rect x="0" y="0" width="200" height="175"  fill="${data.shapeColor}"/>`
         }
         else if (data.shapeChoice === "triangle") {
-            console.log("triangle");
             var shapeString = `<polygon points="100, 1 200, 152 0, 150" fill="${data.shapeColor}"/>`
         }
-
-        console.log(shapeString, "shapeStringxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-
-
+        
+    //Write the svgString to a file:
     const svgString = 
         `<svg width="300" height="200" >
         ${shapeString}
@@ -92,7 +94,7 @@ function init() {
 
     writeToFile("logo.svg", (svgString));
 
-console.log(svgString, "svgString");
+console.log(svgString);
 
 
 
