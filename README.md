@@ -1,12 +1,12 @@
 # SVG Logo Maker Implemented with Jest Testing
 
-This program was created as an exercise for the purpose of learning about and gaining experince building a Node.js command line application from scratch.  
+This program was created as an exercise for the purpose of learning about and gaining experince building a Node.js command line application from scratch and for working with classes and objects.  
 
 The finished program allows the user to choose colors, text and shapes from a list of options to create a variety of simple three character logo designs. 
 
 The logo is rendered in a Scalable Vector Graphics (SVG) file called 'logo.svg'  Each new logo will overwrite any previously existing 'logo.svg' file.  It is left to the user to either rename or copy the 'logo.svg' to another folder to save past results.
 
-The finished program runs from a terminal prompt using [Inquirer.js version 8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4) and 
+The finished program runs from a terminal prompt using [Inquirer.js version 8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4).
 
 In addtion to the finished program testing is implemented with [JEST](https://jestjs.io/docs/getting-started). 
 
@@ -30,12 +30,14 @@ Run the program:
     
     Answer questions as prompted.
 
-    A new [logo.svg](logo.svg) is created. 
+    A new logo.svg file is then created. 
 
 
 ## Program Demo:
 
-Recording of the finished program:
+Recording of the finished program is here:
+
+    [recordingOfProgramRunning\Run Test Suite and then Create 3 Logos.webm]
 
 ## Testing
 
