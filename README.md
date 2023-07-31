@@ -38,11 +38,23 @@ Run the program:
     A new logo.svg file is then created. 
 
 
+##Program Files:
+
+[index.js](index.js)
+
+
+[lib\shape.js](lib\shape.js)
+
+[lib\svg.js](lib\svg.js)
+
+[lib\shapes.test.js](lib\shapes.test.js)
+
+
 ## Program Demo:
 
 Recording of the finished program is here:
 
-    ".\recordingOfProgramRunning\Run Test Suite and then Create 3 Logos.webm"
+    .\recordingOfProgramRunning\Run Test Suite and then Create 3 Logos.webm
 
 ## Testing
 
