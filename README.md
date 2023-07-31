@@ -49,6 +49,14 @@ Run the program:
 
 [lib\shapes.test.js](lib\shapes.test.js)
 
+[examples\BSR-Square-logo.svg](examples\BSR-Square-logo.svg)
+
+[examples\WSG-Circle-logo.svg](examples\WSG-Circle-logo.svg)
+
+[examples\YTB-Triangle-logo.svg](examples\YTB-Triangle-logo.svg)
+
+
+
 
 ## Program Demo:
 
