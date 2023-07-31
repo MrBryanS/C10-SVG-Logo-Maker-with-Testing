@@ -1,5 +1,10 @@
 # SVG Logo Maker Implemented with Jest Testing
 
+
+[Github Repository: 
+C10-SVG-Logo-Maker-with-Testing
+](https://github.com/MrBryanS/C10-SVG-Logo-Maker-with-Testing)
+
 This program was created as an exercise for the purpose of learning about and gaining experince building a Node.js command line application from scratch and for working with classes and objects.  
 
 The finished program allows the user to choose colors, text and shapes from a list of options to create a variety of simple three character logo designs. 
@@ -37,7 +42,7 @@ Run the program:
 
 Recording of the finished program is here:
 
-    [recordingOfProgramRunning\Run Test Suite and then Create 3 Logos.webm]
+    ".\recordingOfProgramRunning\Run Test Suite and then Create 3 Logos.webm"
 
 ## Testing
 
@@ -45,9 +50,7 @@ At the terminal prompt enter: "npm test"
 
 Recording of testing:
 
-## Github Repo: 
 
-[REPO](https://github.com/MrBryanS/C10-SVG-Logo-Maker-with-Testing)
 
 
 

@@ -1,5 +1,8 @@
 const inquirer = require("inquirer")
 const fs = require("fs");
+const { Circle, Triangle, Square } = require("./lib/shape")
+const SVG = require("./lib/svg")
+
 //  console.log("Welcome to the Logo Generator!");
 console.log("Please answer the following questions to generate your logo.");
 console.log("You can choose up to 3 characters for your logo text.");
@@ -24,7 +27,7 @@ function writeToFile(fileName, data) {
 
 // Init prompts user for inputs using the inquirer package and the questions array
 function init() {
-
+    
     inquirer.prompt([
         {
             type: "input",
@@ -43,7 +46,7 @@ function init() {
             type: "list",
             message: questions[2],
             name: "shapeChoice",
-            choices: ["square", "circle", "triangle"]
+            choices: ["circle", "square", "triangle"]
         },
 
         {
@@ -52,57 +55,62 @@ function init() {
             name: "shapeColor",
             choices: ["green", "red", "blue"]
         },
-
+        
     ])
-        //Process user inputs to store code for the shape into the shapeString var
+    //Process user inputs to store code for the shape into the shapeString var
+    
+    .then(function (data) {
+         //if data.logo?text.length !=3, then fix with comments to user: 
+         if (data.logoText.length > 3) {
+            data.logoText = data.logoText.substring(0, 3);
+            console.log("Your logo text string is more than 3 characters.  We will use the first 3 characters.");
+        }
+        
+        else if (data.logoText.length === 0) {
+            data.logoText = "SVG";
+            console.log("You did not enter any characters.  We will use 'SVG' for the logo text.");
+        }
+        console.log("Thank you for using the Logo Generator!");
+              
 
-        .then(function (data) {
-            //if data.logo?text.length !=3, then fix with comments to user: 
-            if (data.logoText.length > 3) {
-                data.logoText = data.logoText.substring(0, 3);
-                console.log("Your logo text string more than 3 characters.  We will use the first 3 characters.");
-            }
-            
-            else if (data.logoText.length === 0) {
-                data.logoText = "SVG";
-                console.log("You did not enter any characters.  We will use 'SVG' for the logo text.");
-            }
-            
-            
-            
-            console.log("Thank you for using the Logo Generator!");
+        if (data.shapeChoice === "circle") {
+            const myShape = new Circle();
+            myShape.setColor(data.shapeColor);
+            const svgObject = new SVG(data.textColor,data.logoText);
+            svgString = svgObject.render(myShape.render())
+
+        }
+        else if (data.shapeChoice === "square") {
+            const myShape = new Square();
+            myShape.setColor(data.shapeColor);
+            const svgObject = new SVG(data.textColor,data.logoText);
+            svgString = svgObject.render(myShape.render())
+
+            // console.log(data.shapeChoice)
+            // var shapeString =  `<rect x="0" y="0" width="200" height="175"  fill="${data.shapeColor}"/>`
+        }
+        else if (data.shapeChoice === "triangle") {
+            const myShape = new Triangle();
+            myShape.setColor(data.shapeColor);
+            const svgObject = new SVG(data.textColor,data.logoText);
+            svgString = svgObject.render(myShape.render())
+            // var shapeString = `<polygon points="100, 1 200, 152 0, 150" fill="${data.shapeColor}"/>`
+        }
+        
+    //Write the svgString to a file:
+    // const svgString = 
+    //     `<svg width="300" height="200" >
+    //     ${shapeString}
+    //     <text text-anchor="middle" alignment-baseline="middle" font-size="3em" x="100" y="100" fill="${data.textColor}">${data.logoText}</text>
+    //     </svg>`
+
+    writeToFile("logo.svg", (svgString));
 
 
-            if (data.shapeChoice === "circle") {
+    });
 
-                var shapeString = `<circle  cx="100" cy="100" r="75" fill="${data.shapeColor}" />`
-            }
-            else if (data.shapeChoice === "square") {
-                console.log(data.shapeChoice)
-                var shapeString = `<rect x="0" y="0" width="200" height="175"  fill="${data.shapeColor}"/>`
-            }
-            else if (data.shapeChoice === "triangle") {
-                var shapeString = `<polygon points="100, 1 200, 152 0, 150" fill="${data.shapeColor}"/>`
-            }
-
-            //Write the svgString to a file:
-            const svgString =
-                `<svg width="300" height="200" >
-        ${shapeString}
-        <text text-anchor="middle" alignment-baseline="middle" font-size="3em" x="100" y="100" fill="${data.textColor}">${data.logoText}</text>
-        </svg>`
-
-            writeToFile("logo.svg", (svgString));
-
-            console.log(svgString);
-
-
-
-
-        });
-
-
-}// end of init function
+    
+    }// end of init function
 
 
 init();      
