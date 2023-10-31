@@ -60,12 +60,12 @@ Run the program:
 
 ## Program Demo:
 
-Recording of the finished program is located in the repo here:
-
-    .\recordingOfProgramRunning\Run Test Suite and then Create 3 Logos.webm
-
-A link to the recording is also provided here:
+A link to the recording is provided here:
     [Recorded Demo of JEST Tests and Running the Program](https://drive.google.com/file/d/17gjytNOVq1dm7v8R-cE9X49RuMZxCM9M/view?usp=sharing)
+
+
+The recording is also available in the REPO for download here:
+    [File of Recorded Demo of JEST Tests and Running the Program](.recordingOfProgramRunning/RunTestSuiteAndProgram.webm)
     
 
 ## Testing
